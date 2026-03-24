@@ -89,6 +89,5 @@ pub fn create_map(env: Env) -> Map<Symbol, i128> {
 
 ## See Also
 
-- [Storage Patterns](./storage.md)
 - [Authorization Patterns](../concepts/authorization.md)
 - [Soroban SDK Reference](https://docs.rs/soroban-sdk)
