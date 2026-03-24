@@ -5,10 +5,21 @@
   color: white;
   overflow: hidden;
 
-  background:
-    radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.35), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.35), transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.2), transparent 60%),
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(124, 58, 237, 0.35),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(14, 165, 233, 0.35),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(236, 72, 153, 0.2),
+      transparent 60%
+    ),
     linear-gradient(135deg, #0f172a 0%, #0b1120 100%);
 }
 
@@ -84,7 +95,7 @@
 
 .features div {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
   padding: 1rem;
   border-radius: 14px;
   backdrop-filter: blur(12px);
@@ -93,7 +104,7 @@
 
 .features div:hover {
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
 }
 
 /* Decorative Glows */
@@ -125,15 +136,9 @@
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(25px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(25px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Responsive */

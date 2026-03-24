@@ -1,6 +1,6 @@
 /**
  * Button Component - Comprehensive button system with dark mode support
- *
+ * 
  * Features:
  * - Variants: primary, secondary, tertiary, ghost, danger
  * - Sizes: small, medium, large
@@ -11,7 +11,12 @@
  * - Dark mode: optimized colors and contrast
  */
 
-import React, { forwardRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
+import React, {
+  forwardRef,
+  type ButtonHTMLAttributes,
+  type ReactNode,
+  type RefObject,
+} from 'react';
 import styles from './buttons.module.css';
 
 /* ── Types ──────────────────────────────────────────────────────────────────── */
@@ -61,7 +66,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type = 'button',
       ...props
     },
-    ref,
+    ref
   ) => {
     // Build class names
     const classNames = [
@@ -89,7 +94,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={classNames}
         aria-busy={loading}
         aria-disabled={disabled || loading}
-        {...props}>
+        {...props}
+      >
         {/* Loading Spinner */}
         {showLoading && <span className={styles.loadingSpinner} aria-hidden="true" />}
 
@@ -113,7 +119,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       </button>
     );
-  },
+  }
 );
 
 Button.displayName = 'Button';
