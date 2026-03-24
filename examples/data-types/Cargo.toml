@@ -1,0 +1,20 @@
+[package]
+name = "data-types"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = { version = "21.0.0", features = ["contract"] }
+
+[dev-dependencies]
+soroban-sdk = { version = "21.0.0", features = ["contract"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
