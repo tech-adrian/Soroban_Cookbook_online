@@ -52,32 +52,28 @@ mod tests {
     #[test]
     fn test_integer_example() {
         let env = Env::default();
-        let contract = DataTypesContract;
-        let result = contract.integer_example(env);
+        let result = DataTypesContract::integer_example(env);
         assert_eq!(result, 42);
     }
 
     #[test]
     fn test_boolean_example() {
         let env = Env::default();
-        let contract = DataTypesContract;
-        let result = contract.boolean_example(env);
+        let result = DataTypesContract::boolean_example(env);
         assert!(result);
     }
 
     #[test]
     fn test_symbol_example() {
         let env = Env::default();
-        let contract = DataTypesContract;
-        let result = contract.symbol_example(env);
+        let result = DataTypesContract::symbol_example(env.clone());
         assert_eq!(result, Symbol::new(&env, "hello"));
     }
 
     #[test]
     fn test_vector_example() {
         let env = Env::default();
-        let contract = DataTypesContract;
-        let result = contract.vector_example(env);
+        let result = DataTypesContract::vector_example(env);
         assert_eq!(result.len(), 3);
     }
 }
